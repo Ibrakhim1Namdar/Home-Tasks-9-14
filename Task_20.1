@@ -1,0 +1,21 @@
+import java.io.File;
+import java.io.FileNotFoundException;
+import java.util.PriorityQueue;
+import java.util.Queue;
+import java.util.Scanner;
+
+public class Task20_1 {
+
+    public static void main(String[] args) throws FileNotFoundException {
+	File file = new File("C:\\Users\\ibrah\\HomeTasks\\src\\com\\company\\Text.txt");
+        Scanner s = new Scanner(file);
+        Queue<String> queue = new PriorityQueue<>();
+        while (s.hasNext()){
+            queue.add(s.next());
+        }
+        while (!queue.isEmpty()) {
+            System.out.println(queue.poll()+" ");
+        }
+
+    }
+}
